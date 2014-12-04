@@ -1,3 +1,5 @@
+Gemfile
+Gemfile.lock
 Manifest
 README.rdoc
 Rakefile
@@ -22,6 +24,7 @@ lib/rmeetup/type/member.rb
 lib/rmeetup/type/photo.rb
 lib/rmeetup/type/rsvp.rb
 lib/rmeetup/type/topic.rb
+rMeetup.gemspec
 spec/client_spec.rb
 spec/fetcher_spec.rb
 spec/fetchers/base_spec.rb
