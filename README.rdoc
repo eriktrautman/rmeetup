@@ -2,6 +2,8 @@
 
 A simple Ruby gem to access the Meetup API.
 
+Forked from [https://github.com/Jberlinsky/rmeetup](https://github.com/Jberlinsky/rmeetup) to add some support for the v2 API for groups.  Pretty hacky changes made, and this gem will not be actively supported.
+
 == Code Sample
 
 Sample code is worth a thousand words:
