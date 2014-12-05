@@ -35,6 +35,9 @@ module RMeetup
         # Check to see if the api returned an error
         raise ApiError.new(data['details'],url) if data.has_key?('problem')
         
+        puts "DATA COMING UP:\n\n\n"
+        puts data.inspect
+        puts "***************\n\n"
         collection = RMeetup::Collection.build(data)
         
         # Format each result in the collection and return it
