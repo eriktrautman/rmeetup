@@ -25,7 +25,7 @@ module RMeetup
       # Special accessors that need typecasting or other parsing
       
       def created
-        return DateTime.parse(self.photo['created'])
+        return DateTime.strptime(self.photo['created'],"%s")
       end
     end
   end

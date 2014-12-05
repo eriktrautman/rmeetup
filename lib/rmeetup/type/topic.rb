@@ -31,7 +31,7 @@ module RMeetup
         return self.topic['members'].to_i
       end
       def updated
-        return DateTime.parse(self.topic['updated'])
+        return DateTime.strptime(self.topic['updated'],"%s")
       end
     end
   end

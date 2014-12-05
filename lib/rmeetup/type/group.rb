@@ -28,10 +28,10 @@ module RMeetup
         return self.group['id'].to_i
       end
       def updated
-        return DateTime.parse(self.group['updated'])
+        return DateTime.strptime(self.group['updated'],"%s")
       end
       def created
-        return DateTime.parse(self.group['created'])
+        return DateTime.strptime(self.group['created'],"%s")
       end
       def lat
         return self.group['lat'].to_f
