@@ -28,7 +28,6 @@ module RMeetup
       # for the request.
       def fetch(options = {})
         url = build_url(options)
-        binding.pry
         json = get_response(url)
         data = JSON.parse(json)
         
