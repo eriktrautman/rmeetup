@@ -25,7 +25,7 @@ module RMeetup
       # Special accessors that need typecasting or other parsing
       
       def created
-        return Time.at(photo['created']).utc.to_datetime
+        return Time.at(photo['created']/1000).utc.to_datetime
       end
     end
   end

@@ -37,10 +37,10 @@ module RMeetup
         self.event['rsvpcount'].to_i
       end
       def updated
-        Time.at(event['updated']).utc.to_datetime
+        Time.at(event['updated']/1000).utc.to_datetime
       end
       def time
-        Time.at(event['time']).utc.to_datetime
+        Time.at(event['time']/1000).utc.to_datetime
       end
     end
   end

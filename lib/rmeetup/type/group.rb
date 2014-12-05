@@ -28,10 +28,10 @@ module RMeetup
         return self.group['id'].to_i
       end
       def updated
-        return Time.at(group['updated']).utc.to_datetime
+        return Time.at(group['updated']/1000).utc.to_datetime
       end
       def created
-        return Time.at(group['created']).utc.to_datetime
+        return Time.at(group['created']/1000).utc.to_datetime
       end
       def lat
         return self.group['lat'].to_f
