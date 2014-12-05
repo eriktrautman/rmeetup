@@ -19,6 +19,8 @@ module RMeetup
       end
       
       def method_missing(id, *args)
+        puts "called #{id}"
+        binding.pry
         return self.group[id.id2name]
       end
       
