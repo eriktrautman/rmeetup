@@ -28,16 +28,13 @@ module RMeetup
       # for the request.
       def fetch(options = {})
         url = build_url(options)
-        
+        binding.pry
         json = get_response(url)
         data = JSON.parse(json)
         
         # Check to see if the api returned an error
         raise ApiError.new(data['details'],url) if data.has_key?('problem')
         
-        puts "DATA COMING UP:\n\n\n"
-        puts data.inspect
-        puts "***************\n\n"
         collection = RMeetup::Collection.build(data)
         
         # Format each result in the collection and return it
